@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>E7</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <circle class="a" cx="377.8729" cy="613.2516" r="9.0546"/>
+    <circle class="a" cx="82.7236" cy="64.7236" r="13.1122"/>
+    <circle class="a" cx="620.2764" cy="430.813" r="11.5038"/>
+    <circle class="a" cx="582.2764" cy="393.813" r="7.582"/>
+    <circle class="a" cx="237.2764" cy="476.813" r="7.582"/>
+    <circle class="a" cx="400.3817" cy="591.3719" r="3.6666"/>
+    <circle class="a" cx="498.3817" cy="536.3719" r="3.6666"/>
+    <circle class="a" cx="193.3817" cy="521.3719" r="3.6666"/>
+    <circle class="a" cx="45.2764" cy="83.813" r="4.9728"/>
+    <circle class="a" cx="142.2764" cy="27.813" r="3.9499"/>
+    <circle class="a" cx="342.2764" cy="73.813" r="3.9499"/>
+    <circle class="a" cx="160.2764" cy="665.813" r="3.9499"/>
+    <circle class="a" cx="653.2764" cy="492.813" r="3.9499"/>
+  </g>
+</svg>

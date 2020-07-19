@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>C4</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <path class="a" d="M269.266,278.29l-88.1107,10.3434L142.7105,258.266l-10.3434-88.1107,30.3669-38.4448,88.1107-10.3434L289.29,151.734l10.3434,88.1107Z"/>
+    <rect class="a" x="242.206" y="294.206" width="57.588" height="57.588" rx="18.894" transform="translate(51.9598 -37.2657) rotate(8.6975)"/>
+    <rect class="a" x="91.1051" y="215.1051" width="31.7897" height="31.7897" rx="9.4422" transform="translate(-121.8304 119.4354) rotate(-39.1551)"/>
+    <rect class="a" x="295.1956" y="119.1956" width="19.6088" height="19.6088" rx="5.4346" transform="translate(340.0469 -200.2988) rotate(73.1491)"/>
+  </g>
+</svg>

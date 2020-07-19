@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>C7</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <rect class="a" x="158.3787" y="90.6396" width="158" height="158" transform="translate(133.3157 -102.9354) rotate(33.5533)"/>
+    <rect class="a" x="121.7832" y="259.3725" width="72.0216" height="72.0216" transform="translate(-98.3968 79.7065) rotate(-21.7961)"/>
+    <rect class="a" x="323.6604" y="218.3334" width="28.7459" height="28.7459" transform="translate(-17.0331 26.9235) rotate(-4.4491)"/>
+  </g>
+</svg>

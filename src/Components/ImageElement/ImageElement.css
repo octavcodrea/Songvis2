@@ -1,0 +1,58 @@
+.generatedImage{
+    width: 700px;
+    height: 700px;
+    border: 1px solid blue;
+}
+
+svg{
+    width: 100%;
+    height: auto;
+    fill: blue;
+}
+
+.A, .B, .C, .D, .E, .BG{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    animation: fadeIn 2s 1;
+}
+
+@keyframes fadeIn {
+    from {
+      transform: scale(0.5);
+      opacity: 0.3;
+    }
+  
+    to {
+      transform: scale(1);
+      opacity: 1
+    }
+}
+
+.A{
+    z-index: 10;
+}
+
+.B{
+    z-index: 8;
+}
+
+.C{
+    z-index: 6;
+}
+
+.D{
+    z-index: 4;
+}
+
+.E{
+    z-index: 2;
+}
+
+.BG{
+    z-index: 0;
+}
+
+

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>E1</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <rect class="a" x="636.0082" y="342.7994" width="14.3317" height="111.9487"/>
+    <rect class="a" x="636.0082" y="294.2333" width="14.3317" height="33.8486"/>
+    <rect class="a" x="636.0082" y="263.9414" width="14.3317" height="15.5743"/>
+    <rect class="a" x="636.0082" y="242.1997" width="14.3317" height="7.0242"/>
+    <rect class="a" x="25.0681" y="81.7678" width="24.2118" height="56.0616"/>
+    <rect class="a" x="25.0681" y="151.8369" width="24.2118" height="26.4874"/>
+    <rect class="a" x="25.0681" y="192.3318" width="24.2118" height="12.4092"/>
+    <rect class="a" x="25.0681" y="218.7485" width="24.2118" height="4.7884"/>
+    <rect class="a" x="390.746" y="629.9056" width="8.8561" height="89.8725" transform="translate(1070.0159 279.6678) rotate(90)"/>
+    <rect class="a" x="474.7003" y="652.2777" width="8.8561" height="45.1282" transform="translate(1153.9702 195.7135) rotate(90)"/>
+    <rect class="a" x="523.746" y="664.8143" width="8.8561" height="20.0552" transform="translate(1203.0159 146.6678) rotate(90)"/>
+  </g>
+</svg>

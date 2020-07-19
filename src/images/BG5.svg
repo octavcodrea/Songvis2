@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>BG5</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <g>
+      <circle class="a" cx="513.9855" cy="312.576" r="88.1719"/>
+      <circle class="a" cx="356.6483" cy="244.0601" r="57.9189"/>
+      <circle class="a" cx="215.6483" cy="274.0601" r="34.6217"/>
+      <circle class="a" cx="235.6483" cy="171.0601" r="22.6068"/>
+      <circle class="a" cx="438.6483" cy="574.0601" r="15.6319"/>
+      <circle class="a" cx="124.6483" cy="350.0601" r="15.6319"/>
+      <circle class="a" cx="572.6483" cy="152.0601" r="15.6319"/>
+      <circle class="a" cx="457.6483" cy="136.0601" r="34.6217"/>
+      <circle class="a" cx="526.6483" cy="491.0601" r="34.6217"/>
+      <circle class="a" cx="305.0804" cy="446.8664" r="133.8879"/>
+    </g>
+  </g>
+</svg>
