@@ -28,10 +28,23 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
     }
 
     return(
-        <div className="sidebar">
-            {formatSearchContainer()}
-            {/* {searchedText} */}
-            {formatSearchResults()}
+        <div className="sidebar-metacontainer">
+            <div className="sidebar">
+                <div className="sidebar-header">
+                    <h1>Songvis</h1>
+                    <p>A song data visualizer</p>
+
+                </div>
+
+                {formatSearchContainer()}
+                {/* {searchedText} */}
+                {formatSearchResults()}
+
+                
+            </div>
+            <div className="sidebar-footer">
+                <a href="https://octavcodrea.com">Octav Codrea</a>
+            </div>
         </div>
     )
 

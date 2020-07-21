@@ -2,7 +2,7 @@ import React from "react";
 import "./ImageElement.css";
 
 import {
-    A1, A2, A3, A4, A5, A6, A7, 
+    A1, A2, A3, A4, A5, A6, A7, A8, A9, 
     B1, B2, B3, B4, B5, B6, B7, 
     C1, C2 ,C3, C4, C5, C6, C7, 
     D1, D2, D3, D4, D5, D6, D7,
@@ -53,184 +53,172 @@ let stopBG1 = "#000000";
 let stopBG2 = "#ffffff";
 
 const formatColors = (tfValence, tfAcousticness, tfDanceability, tfEnergy, tfLoudness, tfTempo) => {
-    if (tfValence >= 0 && tfValence < 0.1){
+    if (tfValence < 0.11){
+        stopA1 = "#1A0F46";
+        stopA2 = "#A2ADE1";
+    }else if(tfValence >= 0.11 && tfValence < 0.22){
         stopA1 = "#3C2A85";
         stopA2 = "#CFD7FF";
-    }else if(tfValence >= 0.1 && tfValence < 0.2){
+    }else if(tfValence >= 0.22 && tfValence < 0.33){
         stopA1 = "#3425B2";
-        stopA2 = "#E2DEFF";
-    }else if(tfValence >= 0.2 && tfValence < 0.3){
-        stopA1 = "#3425B2";
-        stopA2 = "#E2DEFF";
-    }else if(tfValence >= 0.3 && tfValence < 0.4){
-        stopA1 = "#1400C5";
-        stopA2 = "#CFC8FF";
-    }else if(tfValence >= 0.4 && tfValence < 0.5){
+        stopA2 = "#A8BCFF";
+    }else if(tfValence >= 0.33 && tfValence < 0.44){
         stopA1 = "#1400C5";
         stopA2 = "#8FE0FF";
-    }else if(tfValence >= 0.5 && tfValence < 0.6){
-        stopA1 = "#0046AF";
-        stopA2 = "#47FFF9";
-    }else if(tfValence >= 0.6 && tfValence < 0.7){
-        stopA1 = "#3AB4D4";
+    }else if(tfValence >= 0.44 && tfValence < 0.55){
+        stopA1 = "#1776BF";
+        stopA2 = "#47FFE6";
+    }else if(tfValence >= 0.55 && tfValence < 0.66){
+        stopA1 = "#0EB5E1";
         stopA2 = "#FFF82E";
-    }else if(tfValence >= 0.7 && tfValence < 0.8){
-        stopA1 = "#3AB4D4";
-        stopA2 = "#FFF82E";
-    }else if(tfValence >= 0.8 && tfValence < 0.9){
+    }else if(tfValence >= 0.66 && tfValence < 0.77){
         stopA1 = "#E138A8";
         stopA2 = "#FFF947";
-    }else if(tfValence >= 0.9){
+    }else if(tfValence >= 0.77 && tfValence < 0.88){
+        stopA1 = "#E62F00";
+        stopA2 = "#FFE680";
+    }else if(tfValence >= 0.88){
         stopA1 = "#E66400";
         stopA2 = "#FFFF80";
     }
     
-    if (tfAcousticness >= 0 && tfAcousticness < 0.1){
+    if (tfAcousticness < 0.11){
         stopB1 = "#7C4AF2";
         stopB2 = "#8FFFF4";
-    }else if(tfAcousticness >= 0.1 && tfAcousticness < 0.2){
+    }else if(tfAcousticness >= 0.11 && tfAcousticness < 0.22){
         stopB1 = "#3622E1";
         stopB2 = "#ACDEFF";
-    }else if(tfAcousticness >= 0.2 && tfAcousticness < 0.3){
+    }else if(tfAcousticness >= 0.22 && tfAcousticness < 0.33){
         stopB1 = "#533EE4";
         stopB2 = "#EDD2FF";
-    }else if(tfAcousticness >= 0.3 && tfAcousticness < 0.4){
-        stopB1 = "#704AF2";
+    }else if(tfAcousticness >= 0.33 && tfAcousticness < 0.44){
+        stopB1 = "#8551D4";
         stopB2 = "#FFC58B";
-    }else if(tfAcousticness >= 0.4 && tfAcousticness < 0.5){
-        stopB1 = "#704AF2";
-        stopB2 = "#FFC58B";
-    }else if(tfAcousticness >= 0.5 && tfAcousticness < 0.6){
+    }else if(tfAcousticness >= 0.44 && tfAcousticness < 0.55){
         stopB1 = "#CC4A8B";
         stopB2 = "#FFC978";
-    }else if(tfAcousticness >= 0.6 && tfAcousticness < 0.7){
+    }else if(tfAcousticness >= 0.55 && tfAcousticness < 0.66){
         stopB1 = "#FF8C58";
         stopB2 = "#FFDC2E";
-    }else if(tfAcousticness >= 0.7 && tfAcousticness < 0.7){
+    }else if(tfAcousticness >= 0.66 && tfAcousticness < 0.77){
         stopB1 = "#E6A100";
-        stopB2 = "#FFDC2E";
-    }else if(tfAcousticness >= 0.8 && tfAcousticness < 0.9){
-        stopB1 = "#E6A100";
-        stopB2 = "#FFDC2E";
-    }else if(tfAcousticness >= 0.9){
-        stopB1 = "#A48B71";
+        stopB2 = "#FFF787";
+    }else if(tfAcousticness >= 0.77 && tfAcousticness < 0.88){
+        stopB1 = "#ECB637";
+        stopB2 = "#FFFBC1";
+    }else if(tfAcousticness >= 0.88){
+        stopB1 = "#C79A6B";
         stopB2 = "#FFF8CE";
     }
     
-    if (tfDanceability >= 0 && tfDanceability < 0.1){
+    if (tfDanceability < 0.3){
         stopBG1 = "#0C175D";
         stopBG2 = "#76789E";
-    }else if(tfDanceability >= 0.1 && tfDanceability < 0.2){
-        stopBG1 = "#0C175D";
-        stopBG2 = "#76789E";
-    }else if(tfDanceability >= 0.2 && tfDanceability < 0.3){
-        stopBG1 = "#2C2C95";
-        stopBG2 = "#6A9BBC";
     }else if(tfDanceability >= 0.3 && tfDanceability < 0.4){
-        stopBG1 = "#2C2C95";
-        stopBG2 = "#6A9BBC";
+        stopBG1 = "#111175";
+        stopBG2 = "#4B89B4";
     }else if(tfDanceability >= 0.4 && tfDanceability < 0.5){
         stopBG1 = "#0B2A94";
-        stopBG2 = "#62ABC7";
+        stopBG2 = "#308BAE";
     }else if(tfDanceability >= 0.5 && tfDanceability < 0.6){
-        stopBG1 = "#2E2AA2";
-        stopBG2 = "#E1865E";
-    }else if(tfDanceability >= 0.6 && tfDanceability < 0.7){
-        stopBG1 = "#391A61";
-        stopBG2 = "#D6854F";
-    }else if(tfDanceability >= 0.7 && tfDanceability < 0.8){
-        stopBG1 = "#70170A";
-        stopBG2 = "#DE8542";
-    }else if(tfDanceability >= 0.8 && tfDanceability < 0.9){
-        stopBG1 = "#70170A";
-        stopBG2 = "#DE8542";
-    }else if(tfDanceability >= 0.9){
-        stopBG1 = "#612D00";
-        stopBG2 = "#D4902B";
+        stopBG1 = "#002C78";
+        stopBG2 = "#3483C8";
+    }else if(tfDanceability >= 0.6 && tfDanceability < 0.65){
+        stopBG1 = "#1C196B";
+        stopBG2 = "#C76033";
+    }else if(tfDanceability >= 0.65 && tfDanceability < 0.7){
+        stopBG1 = "#25074B";
+        stopBG2 = "#CE5021";
+    }else if(tfDanceability >= 0.7 && tfDanceability < 0.75){
+        stopBG1 = "#4E0829";
+        stopBG2 = "#C95E2E";
+    }else if(tfDanceability >= 0.75 && tfDanceability < 0.8){
+        stopBG1 = "#430019";
+        stopBG2 = "#C53F0D";
+    }else if(tfDanceability >= 0.8){
+        stopBG1 = "#440061";
+        stopBG2 = "#B53C8D";
     }
 
-    if (tfEnergy >= 0 && tfEnergy < 0.1){
+    if (tfEnergy < 0.11){
+        stopD1 = "#2D2277";
+        stopD2 = "#B3A6DF";
+    }else if(tfEnergy >= 0.11 && tfEnergy < 0.22){
         stopD1 = "#222E77";
         stopD2 = "#7596F2";
-    }else if(tfEnergy >= 0.1 && tfEnergy < 0.2){
+    }else if(tfEnergy >= 0.22 && tfEnergy < 0.33){
         stopD1 = "#2C1EA7";
         stopD2 = "#99CEF2";
-    }else if(tfEnergy >= 0.2 && tfEnergy < 0.3){
+    }else if(tfEnergy >= 0.33 && tfEnergy < 0.44){
         stopD1 = "#193CB1";
         stopD2 = "#7FD4CB";
-    }else if(tfEnergy >= 0.3 && tfEnergy < 0.4){
-        stopD1 = "#193CB1";
-        stopD2 = "#7FD4CB";
-    }else if(tfEnergy >= 0.4 && tfEnergy < 0.5){
+    }else if(tfEnergy >= 0.44 && tfEnergy < 0.55){
         stopD1 = "#442B98";
-        stopD2 = "#FFCE9C";
-    }else if(tfEnergy >= 0.5 && tfEnergy < 0.6){
+        stopD2 = "#FF9C9C";
+    }else if(tfEnergy >= 0.55 && tfEnergy < 0.66){
         stopD1 = "#94205A";
         stopD2 = "#F3DE98";
-    }else if(tfEnergy >= 0.6 && tfEnergy < 0.7){
+    }else if(tfEnergy >= 0.66 && tfEnergy < 0.77){
+        stopD1 = "#B51F29";
+        stopD2 = "#F3DE98";
+    }else if(tfEnergy >= 0.77 && tfEnergy < 0.88){
         stopD1 = "#CC551F";
         stopD2 = "#F1E5AA";
-    }else if(tfEnergy >= 0.7 && tfEnergy < 0.8){
-        stopD1 = "#CC551F";
-        stopD2 = "#F1E5AA";
-    }else if(tfEnergy >= 0.8 && tfEnergy < 0.9){
-        stopD1 = "#CC971C";
-        stopD2 = "#FFFCCF";
-    }else if(tfEnergy >= 0.9){
+    }else if(tfEnergy >= 0.88){
         stopD1 = "#CC971C";
         stopD2 = "#FFFCCF";
     }
 
     if (tfLoudness < -25){
-        stopC1 = "#181024";
-        stopC2 = "#B2BFFF";
+        stopC1 = "#28184E";
+        stopC2 = "#ADAFB5";
     }else if(tfLoudness >= -25 && tfLoudness < -15){
-        stopC1 = "#0D007D";
-        stopC2 = "#CFC8FF";
+        stopC1 = "#202A6A";
+        stopC2 = "#AEBBE1";
     }else if(tfLoudness >= -15 && tfLoudness < -10){
-        stopC1 = "#5B4AF2";
-        stopC2 = "#ACC5FF";
+        stopC1 = "#49409C";
+        stopC2 = "#658CE6";
     }else if(tfLoudness >= -10 && tfLoudness < -8){
         stopC1 = "#4A77F2";
-        stopC2 = "#FFACD6";
+        stopC2 = "#DB7FAD";
     }else if(tfLoudness >= -8 && tfLoudness < -7){
-        stopC1 = "#4A77F2";
-        stopC2 = "#FFACD6";
+        stopC1 = "#6A4AF2";
+        stopC2 = "#EE7582";
     }else if(tfLoudness >= -7 && tfLoudness < -6){
-        stopC1 = "#EC6736";
-        stopC2 = "#FFF12A";
+        stopC1 = "#9A2567";
+        stopC2 = "#FFAEAE";
     }else if(tfLoudness >= -6 && tfLoudness < -5){
-        stopC1 = "#EC6736";
-        stopC2 = "#FFF12A";
+        stopC1 = "#CE2866";
+        stopC2 = "#FFACAC";
     }else if(tfLoudness >= -5 && tfLoudness < -4){
-        stopC1 = "#E63F00";
-        stopC2 = "#F8FF34";
+        stopC1 = "#CE2828";
+        stopC2 = "#FFCDAC";
     }else if(tfLoudness >= -4){
-        stopC1 = "#FF0000";
-        stopC2 = "#FFFFFF";
+        stopC1 = "#D1430E";
+        stopC2 = "#FBDF75";
     }
 
     if (tfTempo < 50){
-        stopE1 = "#181024";
-        stopE2 = "#B2BFFF";
+        stopE1 = "#49409C";
+        stopE2 = "#658CE6";
     }else if(tfTempo >= 50 && tfTempo < 80){
-        stopE1 = "#0D007D";
-        stopE2 = "#CFC8FF";
+        stopE1 = "#2C1EA7";
+        stopE2 = "#99CEF2";
     }else if(tfTempo >= 80 && tfTempo < 110){
-        stopE1 = "#5B4AF2";
-        stopE2 = "#ACC5FF";
+        stopE1 = "#193CB1";
+        stopE2 = "#7FD4CB";
     }else if(tfTempo >= 110 && tfTempo < 140){
-        stopE1 = "#4A77F2";
-        stopE2 = "#FFACD6";
+        stopE1 = "#442B98";
+        stopE2 = "#FF9C9C";
     }else if(tfTempo >= 140 && tfTempo < 170){
-        stopE1 = "#4A77F2";
-        stopE2 = "#FFACD6";
+        stopE1 = "#B51F29";
+        stopE2 = "#F3DE98";
     }else if(tfTempo >= 170 && tfTempo < 200){
-        stopE1 = "#EC6736";
-        stopE2 = "#FFF12A";
+        stopE1 = "#CC551F";
+        stopE2 = "#FFE875";
     }else if(tfTempo >= 200){
-        stopE1 = "#EC6736";
-        stopE2 = "#FFF12A";
+        stopE1 = "#FF8C58";
+        stopE2 = "#FFDC2E";
     }
 }
 
@@ -304,27 +292,39 @@ const elementEpiece = (functionX, rotation) => {
 }
 
 const elementE = (functionX, tfTempo) => {
-    let counter = Math.floor(tfTempo);
-    counter = Math.floor(counter / 50);
-    console.log("counter is: ", counter);
+    // let counter = Math.floor(tfTempo);
+    // counter = Math.floor(counter / 50);
+    // console.log("counter is: ", counter);
 
-    let elementEArray = [];
+    // let elementEArray = [];
 
-    for (let i = 0; i< counter; i++){
-        rotateCounter = i * 90;
-        elementEArray.push(rotateCounter);
-    }
+    // for (let i = 0; i< counter; i++){
+    //     rotateCounter = i * 90;
+    //     elementEArray.push(rotateCounter);
+    // }
 
-    const listItems = elementEArray.map((number) =>
-        <li>
-            <svg className="E" style={styleE}>
-                {elementEpiece(functionX, number)};
-            </svg>
-        </li>
-    );
+    // const listItems = elementEArray.map((number) =>
+    //     <li>
+    //         <svg className="E" style={styleE}>
+    //             {elementEpiece(functionX, number)};
+    //         </svg>
+    //     </li>
+    // );
 
-    return (
-        <ul>{listItems}</ul>
+    // return (
+    //     <ul>{listItems}</ul>
+    // )
+
+    return(
+        <svg className="E" style={styleE}  >
+
+            <linearGradient id="gradientE" x2="1" y2="1">
+              <stop offset="0%" stopColor={stopE1} />
+              <stop offset="100%" stopColor={stopE2} />
+            </linearGradient>
+
+            {functionX()};
+        </svg>
     )
 }
 
@@ -360,38 +360,46 @@ const ImageElement = ({
             // break;
 
         case "A":{
-            if(tfEnergy < 0.15){
+            if(tfEnergy < 0.11){
                 return(
                     elementA(A1)
                 ); 
-            }else if(tfEnergy >= 0.15 && tfEnergy < 0.3){
+            }else if(tfEnergy >= 0.11 && tfEnergy < 0.22){
                 return(
                     elementA(A2)
                 ); 
-            }else if(tfEnergy >= 0.3 && tfEnergy < 0.43){
+            }else if(tfEnergy >= 0.22 && tfEnergy < 0.33){
                 return(
                     elementA(A3)
                 ); 
-            }else if(tfEnergy >= 0.43 && tfEnergy < 0.56){
+            }else if(tfEnergy >= 0.33 && tfEnergy < 0.44){
                 //console.log("cat");
                 return(
-                    elementA(A3)
+                    elementA(A4)
                 ); 
-            }else if(tfEnergy >= 0.56 && tfEnergy < 0.7){
+            }else if(tfEnergy >= 0.44 && tfEnergy < 0.55){
                 return(
                     elementA(A5)
                 );
-            }else if(tfEnergy >= 0.7 && tfEnergy < 0.85){
+            }else if(tfEnergy >= 0.55 && tfEnergy < 0.66){
                 return(
                     elementA(A6)
                 ); 
-            }else if(tfEnergy >= 0.85){
+            }else if(tfEnergy >= 0.66 && tfEnergy < 0.77){
                 return(
                     elementA(A7)
                 ); 
+            }else if(tfEnergy >= 0.77 && tfEnergy < 0.88){
+                return(
+                    elementA(A8)
+                ); 
+            }else if(tfEnergy >= 0.88){
+                return(
+                    elementA(A9)
+                ); 
             }else{
                 return(
-                    elementA(A4)
+                    elementA(A5)
                 ); 
             }
             // break;

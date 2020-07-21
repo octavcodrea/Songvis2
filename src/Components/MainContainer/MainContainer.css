@@ -3,3 +3,29 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+
+.mobile-footer{
+    display: none;
+    width: 100%;
+    height: 3vh;
+    
+    bottom: 0px;
+    padding: 10px 0px;
+    color: white;
+    text-align: center;
+}
+
+.mobile-footer a{
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .main{
+        flex-wrap: wrap;
+    }
+
+    .mobile-footer{
+        display: block;
+    }
+  }

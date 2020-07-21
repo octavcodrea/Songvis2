@@ -9,8 +9,8 @@
   <title>C3</title>
   <g>
     <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
-    <rect class="a" x="137" y="126" width="158" height="158" rx="78.9999"/>
-    <rect class="a" x="255.6436" y="283.6436" width="78.7128" height="78.7128" rx="39.3563"/>
-    <rect class="a" x="275.0822" y="111.0822" width="29.8355" height="29.8355" rx="14.9177"/>
+    <rect class="a" x="165.3828" y="157.8462" width="112.5545" height="112.5545" rx="56.2772"/>
+    <rect class="a" x="249.901" y="270.1468" width="56.0726" height="56.0726" rx="28.0363"/>
+    <rect class="a" x="263.7485" y="147.2192" width="21.2539" height="21.2539" rx="10.627"/>
   </g>
 </svg>

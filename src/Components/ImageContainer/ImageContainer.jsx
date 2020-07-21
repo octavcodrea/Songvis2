@@ -1,7 +1,8 @@
 import React from "react";
 import "./ImageContainer.css";
+import { CSSTransition } from "react-transition-group";
 
-import ImageElement from "../ImageElement/ImageElement.jsx"
+import ImageElement from "../ImageElement/ImageElement.jsx";
 
 const ImageContainer = ({
   tfAcousticness,
@@ -13,7 +14,8 @@ const ImageContainer = ({
   tfLoudness,
   artistGenre,
   selectedTrackArtist,
-  selectedTrackName
+  selectedTrackName,
+  loadImage,
 }) => {
   // console.log("img container, acousticness: ",tfAcousticness)
   // console.log("img container, danceability: ",tfDanceability)
@@ -30,92 +32,138 @@ const ImageContainer = ({
 
   return (
     <div className="imageContainer">
-    <div className="generatedImage" style={styleBgDefault}>
+      <div className="generatedImage" style={styleBgDefault}>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="A"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="B"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="C"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="D"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="E"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
+        <CSSTransition
+          in={loadImage}
+          timeout={2000}
+          classNames="image-element"
+          // unmountOnExit
+          appear
+          enter={true}
+        >
+          <ImageElement
+            ElementType="BG"
+            tfAcousticness={tfAcousticness}
+            tfDanceability={tfDanceability}
+            tfEnergy={tfEnergy}
+            tfTempo={tfTempo}
+            tfInstrumentalness={tfInstrumentalness}
+            tfValence={tfValence}
+            tfLoudness={tfLoudness}
+            artistGenre={artistGenre}
+          />
+        </CSSTransition>
 
-      <ImageElement 
-        ElementType = "A"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      <ImageElement 
-        ElementType = "B"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      <ImageElement 
-        ElementType = "C"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      <ImageElement 
-        ElementType = "D"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      <ImageElement 
-        ElementType = "E"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      <ImageElement 
-        ElementType = "BG"
-        tfAcousticness={tfAcousticness}
-        tfDanceability={tfDanceability}
-        tfEnergy={tfEnergy}
-        tfTempo={tfTempo}
-        tfInstrumentalness={tfInstrumentalness}
-        tfValence={tfValence}
-        tfLoudness={tfLoudness}
-        artistGenre={artistGenre}
-      />
-
-      {/* <div className="BG">
+        {/* <div className="BG">
         <img src={imgBG} alt="" />
       </div> */}
-    </div>
+      </div>
       <div className="songTitleDisplay">
         <h3>{selectedTrackName}</h3>
         <h5>{selectedTrackArtist}</h5>
       </div>
-
     </div>
   );
 };
 
 export default ImageContainer;
-

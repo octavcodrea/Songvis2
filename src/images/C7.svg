@@ -9,8 +9,8 @@
   <title>C7</title>
   <g>
     <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
-    <rect class="a" x="158.3787" y="90.6396" width="158" height="158" transform="translate(133.3157 -102.9354) rotate(33.5533)"/>
-    <rect class="a" x="121.7832" y="259.3725" width="72.0216" height="72.0216" transform="translate(-98.3968 79.7065) rotate(-21.7961)"/>
-    <rect class="a" x="323.6604" y="218.3334" width="28.7459" height="28.7459" transform="translate(-17.0331 26.9235) rotate(-4.4491)"/>
+    <rect class="a" x="191.4456" y="152.6761" width="80.4822" height="80.4822" transform="translate(191.7862 -105.9201) rotate(42.612)"/>
+    <rect class="a" x="161.6417" y="243.8763" width="46.0307" height="46.0307" transform="translate(-85.8973 87.644) rotate(-21.7961)"/>
+    <rect class="a" x="290.6661" y="217.6473" width="18.3722" height="18.3722" transform="translate(-16.6926 23.9439) rotate(-4.4491)"/>
   </g>
 </svg>

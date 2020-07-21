@@ -10,6 +10,8 @@ var token = "";
 let fullDataArray = [];
 let selectedTrackObject = [];
 let selectedArtistArray = [];
+let Instrumentalness = 0;
+
 
 class MainContainer extends React.Component {
   constructor(props) {
@@ -36,7 +38,8 @@ class MainContainer extends React.Component {
     selectedTrackArtistGenre: "",
     artistGenre: "",
     selectedTrackName: '',
-    selectedTrackArtist: ''
+    selectedTrackArtist: '',
+    loadImage: false
   };
 
   handleSearchChange = (event) => {
@@ -68,10 +71,7 @@ class MainContainer extends React.Component {
   }
 
   formatImageContainer() {
-    let Instrumentalness = this.state.trackFeatures.instrumentalness;
-    if (Instrumentalness === 0){
-      Instrumentalness = Math.random() * 0.3;
-    }
+    //Instrumentalness = this.state.trackFeatures.instrumentalness;
 
     return (
       <ImageContainer
@@ -85,6 +85,7 @@ class MainContainer extends React.Component {
         artistGenre={this.state.artistGenre}
         selectedTrackArtist={this.state.selectedTrackArtist}
         selectedTrackName={this.state.selectedTrackName}
+        loadImage={this.state.loadImage}
       />
     );
   }
@@ -140,6 +141,12 @@ class MainContainer extends React.Component {
     // }
   }
 
+  setLoadImageFalse = () => {
+    this.setState({
+      loadImage: false
+    })
+  }
+
   selectTrack(event) {
     //var element = event.target || event.srcElement;
     var elementId = event.currentTarget.id;
@@ -160,8 +167,9 @@ class MainContainer extends React.Component {
       selectedTrackName: elementTrackName,
       selectedTrackId: elementId,
       selectedTrackArtistId: elementClass,
+      loadImage: true
     });
-
+    
     // get audio features for track
     fetch(`	https://api.spotify.com/v1/audio-features/${elementId}`, {
       method: "GET",
@@ -223,9 +231,14 @@ class MainContainer extends React.Component {
         }
       );
 
-    console.log("after fetch, artist main genre:", this.state.artistGenre);
-    console.log("after fetch, track features: ", this.state.trackFeatures);
+
+      setTimeout(() => {this.setLoadImageFalse()}, 500);
+
+    // console.log("after fetch, artist main genre:", this.state.artistGenre);
+    // console.log("after fetch, track features: ", this.state.trackFeatures);
   }
+
+
 
   componentDidMount(prevProps, prevState) {
     var request = require("request"); // "Request" library
@@ -265,18 +278,32 @@ class MainContainer extends React.Component {
   }
 
   componentDidUpdate = (prevProps, prevState) => {
+    if(this.state.loadImage === true){
+      Instrumentalness = this.state.trackFeatures.instrumentalness;
+
+      if (Instrumentalness === 0){
+        Instrumentalness = Math.random() * 0.35;
+      }
+    }
+
     if (
       this.state.searchedTextSubmitted &&
       this.state.searchedTextSubmitted !== prevState.searchedTextSubmitted
-    ) {
-      this.fetchSearch();
-
-      //console.log("fullData:",this.state.fullData);
-      this.formatSideBar();
-    }
+      ) {
+        this.fetchSearch();
+        
+        //console.log("fullData:",this.state.fullData);
+        this.formatSideBar();
+        this.setState({
+          
+          loadImage: false
+        })
+      }
   };
 
   render() {
+
+
     return (
       <div className="main">
         {this.formatSideBar()}
@@ -298,6 +325,9 @@ class MainContainer extends React.Component {
           <p>selectedTrackArtist={this.state.selectedTrackArtist}</p>
           <p>selectedTrackName={this.state.selectedTrackName}</p>
         </div> */}
+        <div className="mobile-footer">
+                <a href="https://octavcodrea.com">Octav Codrea</a>
+            </div>
       </div>
     );
   }
