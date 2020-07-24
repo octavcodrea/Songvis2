@@ -1,13 +1,14 @@
 .imageContainer{
     position: relative;
     margin: auto;
-    margin-top: 15px;
+    /* overflow: hidden; */
 }
 
 .generatedImage{
-    /* width: 700px;
-    height: 700px; */
+    /* width: 900px;
+    height: 900px; */
     border: 1px solid rgb(61, 61, 65);
+    /* margin: auto; */
 }
 
 svg{
@@ -91,5 +92,11 @@ svg{
     transform: scale(1);
     opacity: 1;
     transition: 1000ms;
+}
+
+@media only screen and (min-height: 850px){
+    .imageContainer{
+        transform: scale(1.15);
+    }
 }
 

@@ -4,6 +4,15 @@ import SearchContainer from '../SearchContainer/SearchContainer';
 
 const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, selectTrack }) => {
 
+    const showAppInfo = (bool) =>{
+        var appInfo = document.getElementById('appInfo');
+        if(bool){
+            appInfo.style.display = "inline-block";
+        }else{
+            appInfo.style.display = "none";
+        }
+    }
+
     const formatSearchContainer = () =>{
         return <SearchContainer handleSearch={handleSearch} submitSearch={submitSearch} />
     }
@@ -31,10 +40,17 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
         <div className="sidebar-metacontainer">
             <div className="sidebar">
                 <div className="sidebar-header">
-                    <h1>Songvis</h1>
-                    <p>A song data visualizer</p>
 
+                    <h1>Songvis</h1>
+                    <p>A song data visualizer <span 
+                    role="img"
+                    aria-label="info"
+                    onMouseEnter={() => showAppInfo(true)}
+                    onMouseLeave={() => showAppInfo(false)}>
+                        ⏺️</span></p>
                 </div>
+
+                
 
                 {formatSearchContainer()}
                 {/* {searchedText} */}
@@ -45,6 +61,7 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
             <div className="sidebar-footer">
                 <a href="https://octavcodrea.com">Octav Codrea</a>
             </div>
+
         </div>
     )
 

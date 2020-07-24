@@ -4,7 +4,7 @@
     justify-content: space-around; */
     position: relative;
     /* padding: 0px 20px; */
-    width: 300px;
+    width: 360px;
     height: 94vh;
      /* border: 1px solid red;  */
     font-size: 13px;
@@ -16,7 +16,7 @@
 .sidebar-header{
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 360px;
     background-image: linear-gradient(to right,#2437AB, #62D2EF);
     height: auto;
     max-height: 5rem;
@@ -40,6 +40,7 @@
     /* z-index: -3; */
     display: block;
     position: relative;
+    margin: auto;
     width: 100%;
     height: auto;
     max-width: 300px;
@@ -49,6 +50,7 @@
     color: #62D2EF;
     text-align: center;
     font-size: 0.8rem;
+    
 }
 
 .sidebar-footer a{
@@ -106,6 +108,12 @@
     height: auto;
 }
 
+span{
+    margin: 5px;
+}
+
+
+
 /* width */
 ::-webkit-scrollbar {
     width: 15px;
@@ -145,3 +153,4 @@
         display: none;
     }
   }
+

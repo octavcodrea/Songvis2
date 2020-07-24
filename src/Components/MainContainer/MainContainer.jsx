@@ -305,6 +305,11 @@ class MainContainer extends React.Component {
 
 
     return (
+      <div>
+                <div id="appInfo">
+                    <p>This app uses Spotify's song data gathered with machine learning algorithms.</p>
+                    <p>Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes.</p>
+                </div>
       <div className="main">
         {this.formatSideBar()}
         {this.formatImageContainer()}
@@ -327,7 +332,8 @@ class MainContainer extends React.Component {
         </div> */}
         <div className="mobile-footer">
                 <a href="https://octavcodrea.com">Octav Codrea</a>
-            </div>
+        </div>
+      </div>
       </div>
     );
   }
