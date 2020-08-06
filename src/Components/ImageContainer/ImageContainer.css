@@ -1,6 +1,7 @@
 .imageContainer{
     position: relative;
     margin: auto;
+    transition: 1s;
     /* overflow: hidden; */
 }
 
@@ -24,7 +25,9 @@ svg{
     position: absolute;
 }
 
-
+h3{
+    font-weight: 700;
+}
 
 .A{
     z-index: 10;
@@ -94,9 +97,26 @@ svg{
     transition: 1000ms;
 }
 
-@media only screen and (min-height: 850px){
+@media only screen and (min-height: 850px) and (min-width: 1200px){
     .imageContainer{
+        /* margin-top: 45px; */
+        margin-bottom: 70px;
         transform: scale(1.15);
     }
 }
 
+@media only screen and (min-width: 500px) and (max-width: 900px){
+    .imageContainer{
+        margin-top: -25px;
+        margin-bottom: -30px;
+        transform: scale(0.80);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .imageContainer{
+        margin-top: -60px;
+        margin-bottom: -60px;
+        transform: scale(0.65);
+    }
+}

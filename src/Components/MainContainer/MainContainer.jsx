@@ -4,6 +4,7 @@ import SideBar from "../SideBar/SideBar.jsx";
 import ImageContainer from "../ImageContainer/ImageContainer.jsx";
 import "./MainContainer.css";
 
+
 var client_id = "6e1dde8891e74eec96e04dfd313e1ebc";
 var client_secret = "4b5a5de1e7ba44fea28195400c16b62b";
 var token = "";
@@ -18,11 +19,10 @@ class MainContainer extends React.Component {
     super(props);
 
     this.formatSideBar = this.formatSideBar.bind(this);
-    //this.formatImageContainer = this.formatImageContainer.bind(this);
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.submitSearch = this.submitSearch.bind(this);
     this.selectTrack = this.selectTrack.bind(this);
-    // this.updateItems = this.updateItems.bind(this);
+    
   }
 
   state = {
@@ -51,8 +51,6 @@ class MainContainer extends React.Component {
   submitSearch = (event, x) => {
     event.preventDefault();
     this.setState({
-      //fullData: [],
-      //items: [],
       searchedTextSubmitted: this.state.searchedText,
       searchedText: "",
     });
@@ -71,8 +69,6 @@ class MainContainer extends React.Component {
   }
 
   formatImageContainer() {
-    //Instrumentalness = this.state.trackFeatures.instrumentalness;
-
     return (
       <ImageContainer
         tfAcousticness={this.state.trackFeatures.acousticness}
@@ -90,6 +86,7 @@ class MainContainer extends React.Component {
     );
   }
 
+  
   fetchSearch() {
     fetch(
       `	https://api.spotify.com/v1/search?q=${this.state.searchedTextSubmitted}&type=track`,
@@ -106,12 +103,10 @@ class MainContainer extends React.Component {
       .then(
         (result) => {
           fullDataArray = result.tracks.items;
-          //console.log("full data array", fullDataArray);
           this.setState(
             {
               isLoaded: true,
-              //items: ,
-              // fullData: [this.state.fullData.push(result.tracks.items)],
+
               items: fullDataArray,
             },
             () => console.log(result)
@@ -131,24 +126,15 @@ class MainContainer extends React.Component {
       );
   }
 
-  updateItems() {
-    // if(this.state.fullData){
-    //         this.setState({
-    //             items: fullDataArray
-    //         })
-    //     this.state.items.flat();
-    //     console.log("fuck")
-    // }
-  }
-
   setLoadImageFalse = () => {
     this.setState({
       loadImage: false
     })
   }
 
+  //gets called when the user selects a track in the results list
+  //gets the artist and track name from the div and sets the state prop equal to them
   selectTrack(event) {
-    //var element = event.target || event.srcElement;
     var elementId = event.currentTarget.id;
     var elementClass = event.currentTarget.className;
 
@@ -156,12 +142,11 @@ class MainContainer extends React.Component {
 
     var elementTrackName = document.getElementById(`${elementId}-resultName`).textContent;
     var elementTrackArtist = document.getElementById(`${elementId}-resultArtist`).textContent;
-    // var elementTrackArtist = event.getElementsByClassName("resultArtist")[0];
     
-    console.log("selected track name: ",elementTrackName);
-    console.log("selected track artist: ",elementTrackArtist);
+    // console.log("selected track name: ",elementTrackName);
+    // console.log("selected track artist: ",elementTrackArtist);
 
-    console.log("div has been clicked, id: ", elementId);
+    // console.log("div has been clicked, id: ", elementId);
     this.setState({
       selectedTrackArtist: elementTrackArtist,
       selectedTrackName: elementTrackName,
@@ -231,13 +216,9 @@ class MainContainer extends React.Component {
         }
       );
 
-
+      //reset 
       setTimeout(() => {this.setLoadImageFalse()}, 500);
-
-    // console.log("after fetch, artist main genre:", this.state.artistGenre);
-    // console.log("after fetch, track features: ", this.state.trackFeatures);
   }
-
 
 
   componentDidMount(prevProps, prevState) {
@@ -269,7 +250,6 @@ class MainContainer extends React.Component {
           json: true,
         };
         request.get(options, function (error, response, body) {
-          //console.log(body);
         });
       }
     });
@@ -278,6 +258,7 @@ class MainContainer extends React.Component {
   }
 
   componentDidUpdate = (prevProps, prevState) => {
+    // if the instrumentalness is == 0 it makes it equal to a value between 0 and 0.35 so the same shape doesn't appear too often.
     if(this.state.loadImage === true){
       Instrumentalness = this.state.trackFeatures.instrumentalness;
 
@@ -286,13 +267,12 @@ class MainContainer extends React.Component {
       }
     }
 
+    //checks to see if the user submits the same search again and if so, does not try reloading the search results
     if (
       this.state.searchedTextSubmitted &&
       this.state.searchedTextSubmitted !== prevState.searchedTextSubmitted
       ) {
         this.fetchSearch();
-        
-        //console.log("fullData:",this.state.fullData);
         this.formatSideBar();
         this.setState({
           
@@ -303,17 +283,13 @@ class MainContainer extends React.Component {
 
   render() {
 
-
     return (
-      <div>
-                <div id="appInfo">
-                    <p>This app uses Spotify's song data gathered with machine learning algorithms.</p>
-                    <p>Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes.</p>
-                </div>
+
       <div className="main">
         {this.formatSideBar()}
         {this.formatImageContainer()}
 
+        {/* visible states for debugging purposes */}
         {/* <div className="debugging">
           <p>this.state.searchedText: {this.state.searchedText}</p>
           <p>this.state.searchedTextSubmitted:{" "}{this.state.searchedTextSubmitted}</p>
@@ -334,7 +310,7 @@ class MainContainer extends React.Component {
                 <a href="https://octavcodrea.com">Octav Codrea</a>
         </div>
       </div>
-      </div>
+
     );
   }
 }

@@ -39,19 +39,12 @@ let styleBG = {
     fill: "url(#gradientBG)"
 }
 
-let stopA1 = "#000000";
-let stopA2 = "#ffffff";
-let stopB1 = "#000000";
-let stopB2 = "#ffffff";
-let stopC1 = "#000000";
-let stopC2 = "#ffffff";
-let stopD1 = "#000000";
-let stopD2 = "#ffffff";
-let stopE1 = "#000000";
-let stopE2 = "#ffffff";
-let stopBG1 = "#000000";
-let stopBG2 = "#ffffff";
+//initial setup for shape colors
+let stopA1, stopA2, stopB1, stopB2, stopC1, stopC2, stopD1, stopD2, stopE1, stopE2, stopBG1, stopBG2;
+ stopA1 = stopB1 = stopC1 = stopD1 = stopE1 = stopBG1 = "#11121a";
+ stopA2 = stopB2 = stopC2 = stopD2 = stopE2 = stopBG2 = "#252433";
 
+//sets up the colors for gradients depending on the value of the song features
 const formatColors = (tfValence, tfAcousticness, tfDanceability, tfEnergy, tfLoudness, tfTempo) => {
     if (tfValence < 0.11){
         stopA1 = "#1A0F46";
@@ -277,19 +270,19 @@ const elementD = (functionX) => {
     )
 }
 
-const elementEpiece = (functionX, rotation) => {
-    return(
-        <svg className="E" style={styleE}  >
+// const elementEpiece = (functionX, rotation) => {
+//     return(
+//         <svg className="E" style={styleE}  >
 
-            <linearGradient id="gradientE" x2="1" y2="1">
-              <stop offset="0%" stopColor={stopE1} />
-              <stop offset="100%" stopColor={stopE2} />
-            </linearGradient>
+//             <linearGradient id="gradientE" x2="1" y2="1">
+//               <stop offset="0%" stopColor={stopE1} />
+//               <stop offset="100%" stopColor={stopE2} />
+//             </linearGradient>
 
-            {functionX()};
-        </svg>
-    )
-}
+//             {functionX()};
+//         </svg>
+//     )
+// }
 
 const elementE = (functionX, tfTempo) => {
     // let counter = Math.floor(tfTempo);

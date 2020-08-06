@@ -21,10 +21,6 @@ const ImageContainer = ({
   // console.log("img container, danceability: ",tfDanceability)
   // console.log("img container, artistGenre: ",artistGenre)
 
-  // let imgB=".../images/B1.svg";
-  // let imgC=".../images/C1.svg";
-  // let imgBG=".../images/BG1.svg";
-
   let styleBgDefault = {
     position: "relative",
     backgroundColor: "#1D1C2A",
@@ -154,9 +150,6 @@ const ImageContainer = ({
           />
         </CSSTransition>
 
-        {/* <div className="BG">
-        <img src={imgBG} alt="" />
-      </div> */}
       </div>
       <div className="songTitleDisplay">
         <h3>{selectedTrackName}</h3>

@@ -3,6 +3,7 @@ import "./SearchContainer.css"
 
 const SearchContainer = ({ searchedText, handleSearch, submitSearch }) => {
 
+    // search container component inside the sidebar
     return(
         <div className="searchContainer">
             <form onSubmit={submitSearch} >

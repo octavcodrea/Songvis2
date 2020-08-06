@@ -23,6 +23,7 @@
 
 .appInfo{
     width: 500px;
+    
     display: none;
     position: absolute;
     margin: 10px;
@@ -33,7 +34,11 @@
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width:1200px) and (min-width: 900px){
+    /* body{
+        background-color: brown;
+    } */
+
     .main{
         flex-wrap: wrap;
     }
@@ -41,4 +46,21 @@
     .mobile-footer{
         display: block;
     }
+}
+
+@media only screen and (max-width: 900px) {
+    /* body{
+        background-color: pink;
+    } */
+    
+    .main{
+        flex-wrap: wrap;
+    }
+
+    .mobile-footer{
+        display: block;
+    }
+
+
   }
+

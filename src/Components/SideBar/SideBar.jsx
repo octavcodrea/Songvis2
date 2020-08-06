@@ -1,22 +1,17 @@
 import React from 'react';
 import './SideBar.css';
 import SearchContainer from '../SearchContainer/SearchContainer';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
 
 const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, selectTrack }) => {
-
-    const showAppInfo = (bool) =>{
-        var appInfo = document.getElementById('appInfo');
-        if(bool){
-            appInfo.style.display = "inline-block";
-        }else{
-            appInfo.style.display = "none";
-        }
-    }
 
     const formatSearchContainer = () =>{
         return <SearchContainer handleSearch={handleSearch} submitSearch={submitSearch} />
     }
 
+    //takes the search results from a parent component and maps them to a list of divs
+    //the id for the track and artist names are used when displaying the selected track under the generated image
     const formatSearchResults = () =>{
         let listItems = [1, 2];
         if(Array.isArray(searchResults)){
@@ -28,7 +23,6 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
                     <div className="searchResultText">
                         <h3 id={`${item.id}-resultName`}>{item.name}</h3>
                         <h5 id={`${item.id}-resultArtist`}>{item.artists[0].name}</h5>
-                        {/* ${searchResults.indexOf(item)} */}
                     </div>
                 </li>
             )
@@ -42,20 +36,19 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
                 <div className="sidebar-header">
 
                     <h1>Songvis</h1>
-                    <p>A song data visualizer <span 
-                    role="img"
-                    aria-label="info"
-                    onMouseEnter={() => showAppInfo(true)}
-                    onMouseLeave={() => showAppInfo(false)}>
-                        ⏺️</span></p>
+                    <p>A song data visualizer </p>
+
+                    {/* info icon next to the app title, displays a tooltip when hovered */}
+                    <Tooltip title={"This app uses Spotify's song data gathered with machine learning algorithms. Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes."}>
+                        
+                        <IconButton  size="small" className={"info"} disableRipple="true">
+                            <span class="material-icons">info</span>
+                        </IconButton>
+                    </Tooltip>   
                 </div>
 
-                
-
                 {formatSearchContainer()}
-                {/* {searchedText} */}
                 {formatSearchResults()}
-
                 
             </div>
             <div className="sidebar-footer">
