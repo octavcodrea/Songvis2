@@ -17,15 +17,13 @@ const ImageContainer = ({
   selectedTrackName,
   loadImage,
 }) => {
-  // console.log("img container, acousticness: ",tfAcousticness)
-  // console.log("img container, danceability: ",tfDanceability)
-  // console.log("img container, artistGenre: ",artistGenre)
 
   let styleBgDefault = {
     position: "relative",
     backgroundColor: "#1D1C2A",
   };
 
+  // Return a generatedImage div for every type of image part.
   return (
     <div className="imageContainer">
       <div className="generatedImage" style={styleBgDefault}>

@@ -11,14 +11,16 @@ import {
 } from "./SVGElements.jsx";
 
 let rotateCounter = 0;
+
+// We set the gradient fills for the shapes in React rather than CSS because it's less of a hassle.
+// The 2 colors for the gradient are decided based on values obtained from the Spotify API.
+
+// Style setup that will be attributed to the shapes.
 let styleA = {
     fill: "url(#gradientA)",
 };
 
 let styleB = {
-    // width: "700px",
-    // height: "700px",
-    // position: "absolute",
     fill: "url(#gradientB)",
 };
 
@@ -39,12 +41,12 @@ let styleBG = {
     fill: "url(#gradientBG)"
 }
 
-//initial setup for shape colors
+// initial setup for shape colors
 let stopA1, stopA2, stopB1, stopB2, stopC1, stopC2, stopD1, stopD2, stopE1, stopE2, stopBG1, stopBG2;
  stopA1 = stopB1 = stopC1 = stopD1 = stopE1 = stopBG1 = "#11121a";
  stopA2 = stopB2 = stopC2 = stopD2 = stopE2 = stopBG2 = "#252433";
 
-//sets up the colors for gradients depending on the value of the song features
+// sets up the colors for gradients depending on the value of the song features
 const formatColors = (tfValence, tfAcousticness, tfDanceability, tfEnergy, tfLoudness, tfTempo) => {
     if (tfValence < 0.11){
         stopA1 = "#1A0F46";
@@ -270,43 +272,7 @@ const elementD = (functionX) => {
     )
 }
 
-// const elementEpiece = (functionX, rotation) => {
-//     return(
-//         <svg className="E" style={styleE}  >
-
-//             <linearGradient id="gradientE" x2="1" y2="1">
-//               <stop offset="0%" stopColor={stopE1} />
-//               <stop offset="100%" stopColor={stopE2} />
-//             </linearGradient>
-
-//             {functionX()};
-//         </svg>
-//     )
-// }
-
 const elementE = (functionX, tfTempo) => {
-    // let counter = Math.floor(tfTempo);
-    // counter = Math.floor(counter / 50);
-    // console.log("counter is: ", counter);
-
-    // let elementEArray = [];
-
-    // for (let i = 0; i< counter; i++){
-    //     rotateCounter = i * 90;
-    //     elementEArray.push(rotateCounter);
-    // }
-
-    // const listItems = elementEArray.map((number) =>
-    //     <li>
-    //         <svg className="E" style={styleE}>
-    //             {elementEpiece(functionX, number)};
-    //         </svg>
-    //     </li>
-    // );
-
-    // return (
-    //     <ul>{listItems}</ul>
-    // )
 
     return(
         <svg className="E" style={styleE}  >
@@ -427,12 +393,10 @@ const ImageElement = ({
             }else if(tfDanceability >= 0.85){
                 return(
                     elementB(B7)
-
                 ); 
             }else{
                 return(
                     elementB(B4)
-
                 ); 
             }
             // break;
@@ -553,43 +517,34 @@ const ImageElement = ({
         case "BG":{
             if(tfDanceability < 0.15){
                 return(
-
                     elementBG(BG1)
                 ); 
             }else if(tfDanceability >= 0.15 && tfDanceability < 0.3){
                 return(
-
                     elementBG(BG2)
-                    
                 ); 
             }else if(tfDanceability >= 0.3 && tfDanceability < 0.43){
                 return(
-
                     elementBG(BG3)
                 ); 
             }else if(tfDanceability >= 0.43 && tfDanceability < 0.56){
                 return(
-
                     elementBG(BG4)
                 ); 
             }else if(tfDanceability >= 0.56 && tfDanceability < 0.7){
                 return(
-
                     elementBG(BG5)
                 ); 
             }else if(tfDanceability >= 0.7 && tfDanceability < 0.85){
                 return(
-
                     elementBG(BG6)
                 ); 
             }else if(tfDanceability >= 0.85){
                 return(
-
                     elementBG(BG7)
                 ); 
             }else{
                 return(
-
                     elementBG(BG4)
                 ); 
             }

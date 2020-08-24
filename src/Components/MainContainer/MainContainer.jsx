@@ -1,6 +1,5 @@
 import React from "react";
 import SideBar from "../SideBar/SideBar.jsx";
-//import SearchContainer from '../SearchContainer/SearchContainer.jsx';
 import ImageContainer from "../ImageContainer/ImageContainer.jsx";
 import "./MainContainer.css";
 
@@ -143,10 +142,6 @@ class MainContainer extends React.Component {
     var elementTrackName = document.getElementById(`${elementId}-resultName`).textContent;
     var elementTrackArtist = document.getElementById(`${elementId}-resultArtist`).textContent;
     
-    // console.log("selected track name: ",elementTrackName);
-    // console.log("selected track artist: ",elementTrackArtist);
-
-    // console.log("div has been clicked, id: ", elementId);
     this.setState({
       selectedTrackArtist: elementTrackArtist,
       selectedTrackName: elementTrackName,
@@ -254,7 +249,7 @@ class MainContainer extends React.Component {
       }
     });
 
-    this.updateItems();
+    // this.updateItems();
   }
 
   componentDidUpdate = (prevProps, prevState) => {

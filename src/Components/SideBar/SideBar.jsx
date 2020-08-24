@@ -52,6 +52,7 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
                 
             </div>
             <div className="sidebar-footer">
+                {/* that's my name, hi */}
                 <a href="https://octavcodrea.com">Octav Codrea</a>
             </div>
 
