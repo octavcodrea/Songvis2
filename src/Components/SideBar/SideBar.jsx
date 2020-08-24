@@ -36,7 +36,7 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
                 <div className="sidebar-header">
 
                     <h1>Songvis</h1>
-                    <p>A song data visualizer </p>
+                    <p>A song data image generator </p>
 
                     {/* info icon next to the app title, displays a tooltip when hovered */}
                     <Tooltip title={"This app uses Spotify's song data gathered with machine learning algorithms. Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes."}>

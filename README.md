@@ -1,6 +1,5 @@
-
 ## Songvis
-a WIP React app by Octav Codrea
+https://songvis.octavcodrea.com
 
 This app connects to the Spotify API and allows searching for songs.
 
