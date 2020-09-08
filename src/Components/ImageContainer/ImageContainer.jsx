@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImageContainer.css";
+// import "./ImageContainer.css";
 import { CSSTransition } from "react-transition-group";
 
 import ImageElement from "../ImageElement/ImageElement.jsx";

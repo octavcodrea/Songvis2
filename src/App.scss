@@ -3,24 +3,23 @@ maincolor-2: #62D2EF;
 
 seccolor-1: #FF7A06;
 seccolor-2: #FFE787; */
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
+
   color: white;
   background-color: #252433;
 }
 
+//MAIN CONTAINER
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
   overflow: hidden;
 }
 
@@ -28,6 +27,7 @@ body {
   display: none;
   width: 100%;
   height: 3vh;
+
   bottom: 0px;
   padding: 10px 0px;
   color: white;
@@ -41,14 +41,17 @@ body {
 
 .appInfo {
   width: 500px;
+
   display: none;
   position: absolute;
   margin: 10px;
   z-index: 15;
   background-color: #252a42;
-  -webkit-transition: 2s;
+
   transition: 2s;
 }
+
+// SIDEBAR
 
 .sidebar {
   position: relative;
@@ -62,7 +65,6 @@ body {
   display: block;
   width: 100%;
   max-width: 360px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2437ab), to(#62d2ef));
   background-image: linear-gradient(to right, #2437ab, #62d2ef);
   height: auto;
   max-height: 5rem;
@@ -78,8 +80,6 @@ body {
 }
 
 .sidebar-header p {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 10px 10px;
 }
@@ -114,17 +114,14 @@ body {
   list-style-type: none;
   text-align: left;
   /* margin-bottom: 30px; */
+
   overflow-y: scroll;
 }
 
 .resultsList li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 3px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 1px solid black;
   cursor: pointer;
   background-color: #252433;
@@ -152,11 +149,11 @@ body {
   padding: 5px;
   height: 50px;
   width: auto;
-}
-
-.searchResultImage img {
-  width: 50px;
-  height: auto;
+    
+    img {
+        width: 50px;
+        height: auto;
+    }
 }
 
 span {
@@ -170,8 +167,7 @@ span {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
@@ -186,13 +182,14 @@ span {
   background: #5193d1;
 }
 
+
+
+// SEARCH CONTAINER
+
 .searchContainer {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .searchContainer form {
@@ -226,10 +223,11 @@ span {
   }
 }
 
+// IMAGE CONTAINER
+
 .imageContainer {
   position: relative;
   margin: auto;
-  -webkit-transition: 1s;
   transition: 1s;
   /* overflow: hidden; */
 }
@@ -237,14 +235,14 @@ span {
 .generatedImage {
   /* width: 900px;
     height: 900px; */
-  border: 1px solid #3d3d41;
+  border: 1px solid rgb(61, 61, 65);
   /* margin: auto; */
 }
 
 svg {
   width: 100%;
   height: auto;
-  fill: #3d3d41;
+  fill: rgb(61, 61, 65);
 }
 
 .A,
@@ -310,45 +308,36 @@ h3 {
 }
 
 .image-element-enter {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
   opacity: 0;
-  -webkit-transition: 1ms;
   transition: 1ms;
 }
 
 .image-element-enter-active {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
   opacity: 0;
-  -webkit-transition: 1000ms;
   transition: 1000ms;
 }
 
 .image-element-exit {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
   opacity: 1;
-  -webkit-transition: 1000ms;
   transition: 1000ms;
 }
 
 .image-element-exit-active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 1;
-  -webkit-transition: 1000ms;
   transition: 1000ms;
 }
 
+// IMAGE ELEMENT
 .generatedImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
   width: 700px;
   height: 700px;
-  border: 1px solid #3d3d41;
+  border: 1px solid rgb(61, 61, 65);
   overflow: hidden;
   /* transform: scale(1.1); */
 }
@@ -356,7 +345,7 @@ h3 {
 svg {
   width: 100%;
   height: auto;
-  fill: #3d3d41;
+  fill: rgb(61, 61, 65);
 }
 
 .A,
@@ -370,156 +359,81 @@ svg {
   height: 100%;
   position: absolute;
   margin: auto;
-  /* animation: fadeIn 2s 1; */
-}
 
-@-webkit-keyframes move1 {
-  0% {
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-  }
-  25% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  50% {
-    -webkit-transform: translate(0px, -5px);
-            transform: translate(0px, -5px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-  }
+  /* animation: fadeIn 2s 1; */
 }
 
 @keyframes move1 {
   0% {
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
   }
   25% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   50% {
-    -webkit-transform: translate(0px, -5px);
-            transform: translate(0px, -5px);
+    transform: translate(0px, -5px);
   }
   75% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(0px, 5px);
-            transform: translate(0px, 5px);
-  }
-}
-
-@-webkit-keyframes pulse1 {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  22% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  80% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: translate(0px, 5px);
   }
 }
 
 @keyframes pulse1 {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   22% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    transform: scale(1.02);
   }
   50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
   80% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    transform: scale(1.02);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes spin1 {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: scale(1);
   }
 }
 
 @keyframes spin1 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .A {
   z-index: 10;
-  -webkit-animation: pulse1 6s linear infinite;
-          animation: pulse1 6s linear infinite;
+  animation: pulse1 6s linear infinite;
 }
 
 .B {
   z-index: 8;
-  -webkit-animation: move1 5s linear infinite;
-          animation: move1 5s linear infinite;
+  animation: move1 5s linear infinite;
 }
 
 .C {
   z-index: 6;
-  -webkit-animation: move1 5.5s linear infinite;
-          animation: move1 5.5s linear infinite;
+  animation: move1 5.5s linear infinite;
 }
 
 .D {
   z-index: 4;
-  -webkit-animation: spin1 90s linear infinite;
-          animation: spin1 90s linear infinite;
+  animation: spin1 90s linear infinite;
 }
 
 .E {
   z-index: 2;
-  -webkit-animation: spin1 120s linear infinite;
-          animation: spin1 120s linear infinite;
+  animation: spin1 120s linear infinite;
 }
 
 .BG {
   z-index: 1;
-  -webkit-animation: spin1 180s linear infinite;
-          animation: spin1 180s linear infinite;
+  animation: spin1 180s linear infinite;
 }
-/*# sourceMappingURL=App.css.map */

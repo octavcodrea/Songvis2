@@ -1,7 +1,8 @@
 import React from "react";
 import SideBar from "../SideBar/SideBar.jsx";
 import ImageContainer from "../ImageContainer/ImageContainer.jsx";
-import "./MainContainer.css";
+import { Tooltip, IconButton } from "@material-ui/core";
+// import "./MainContainer.css";
 
 
 var client_id = "6e1dde8891e74eec96e04dfd313e1ebc";
@@ -65,6 +66,24 @@ class MainContainer extends React.Component {
         selectTrack={this.selectTrack}
       />
     );
+  }
+
+  formatHeader(){
+    return(
+      <div className="sidebar-header">
+          <h1>Songvis</h1>
+          <p>A song data image generator </p>
+
+          {/* info icon next to the app title, displays a tooltip when hovered */}
+          <Tooltip title={"This app uses Spotify's song data gathered with machine learning algorithms. Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes."}>
+              
+              <IconButton  size="small" className={"info"} disableRipple="true">
+                  <span class="material-icons">info</span>
+              </IconButton>
+          </Tooltip>   
+        </div>
+
+    )
   }
 
   formatImageContainer() {
@@ -281,26 +300,12 @@ class MainContainer extends React.Component {
     return (
 
       <div className="main">
+        {this.formatHeader()}
+
         {this.formatSideBar()}
+        
         {this.formatImageContainer()}
 
-        {/* visible states for debugging purposes */}
-        {/* <div className="debugging">
-          <p>this.state.searchedText: {this.state.searchedText}</p>
-          <p>this.state.searchedTextSubmitted:{" "}{this.state.searchedTextSubmitted}</p>
-          <p>this.state.selectedTrackId: {this.state.selectedTrackId}</p>
-          <p>this.state.selectedTrackArtistId: {this.state.selectedTrackArtistId}</p>
-          <p>tfAcousticness={this.state.trackFeatures.acousticness} </p>
-          <p>tfDanceability={this.state.trackFeatures.danceability} </p>
-          <p>tfEnergy={this.state.trackFeatures.energy} </p>
-          <p>tfTempo={this.state.trackFeatures.tempo}</p>
-          <p>tfInstrumentalness={this.state.trackFeatures.instrumentalness}</p>
-          <p>tfValence={this.state.trackFeatures.valence}</p>
-          <p>tfLoudness={this.state.trackFeatures.loudness}</p>
-          <p>artistGenre={this.state.artistGenre}</p>
-          <p>selectedTrackArtist={this.state.selectedTrackArtist}</p>
-          <p>selectedTrackName={this.state.selectedTrackName}</p>
-        </div> */}
         <div className="mobile-footer">
                 <a href="https://octavcodrea.com">Octav Codrea</a>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SearchContainer.css"
+// import "./SearchContainer.css"
 
 const SearchContainer = ({ searchedText, handleSearch, submitSearch }) => {
 

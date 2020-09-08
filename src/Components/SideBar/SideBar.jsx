@@ -1,8 +1,7 @@
 import React from 'react';
-import './SideBar.css';
+// import './SideBar.css';
 import SearchContainer from '../SearchContainer/SearchContainer';
-import Tooltip from '@material-ui/core/Tooltip';
-import IconButton from '@material-ui/core/IconButton';
+
 
 const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, selectTrack }) => {
 
@@ -33,20 +32,7 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
     return(
         <div className="sidebar-metacontainer">
             <div className="sidebar">
-                <div className="sidebar-header">
-
-                    <h1>Songvis</h1>
-                    <p>A song data image generator </p>
-
-                    {/* info icon next to the app title, displays a tooltip when hovered */}
-                    <Tooltip title={"This app uses Spotify's song data gathered with machine learning algorithms. Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes."}>
-                        
-                        <IconButton  size="small" className={"info"} disableRipple="true">
-                            <span class="material-icons">info</span>
-                        </IconButton>
-                    </Tooltip>   
-                </div>
-
+                
                 {formatSearchContainer()}
                 {formatSearchResults()}
                 
