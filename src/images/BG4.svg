@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>BG4</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <g>
+      <rect class="a" x="200.9158" y="191.4754" width="329.6784" height="342.0491" rx="120.8842" transform="translate(-106.855 157.9939) rotate(-21.345)"/>
+      <rect class="a" x="211.0382" y="112.2753" width="97.9003" height="97.9003" rx="37.1947" transform="translate(-40.8495 105.6904) rotate(-21.345)"/>
+      <rect class="a" x="120.0382" y="413.2753" width="97.9003" height="97.9003" rx="37.1947" transform="translate(-156.6504 93.2149) rotate(-21.345)"/>
+      <rect class="a" x="147.6796" y="206.9166" width="54.6176" height="54.6176" rx="15.5145" transform="translate(-73.2508 79.7593) rotate(-21.345)"/>
+      <rect class="a" x="403.3666" y="522.6036" width="83.2435" height="83.2435" rx="27.5578" transform="translate(-174.8446 200.6707) rotate(-21.345)"/>
+      <rect class="a" x="511.6796" y="237.9166" width="54.6176" height="54.6176" rx="15.5145" transform="translate(-59.5659 214.3754) rotate(-21.345)"/>
+    </g>
+  </g>
+</svg>

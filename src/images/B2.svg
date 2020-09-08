@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>B2</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <rect class="a" x="137" y="370" width="204" height="204" rx="49.8158" transform="translate(-181.8213 792.6469) rotate(-100.4501)"/>
+    <rect class="a" x="371.9257" y="447.9257" width="74.1487" height="74.1487" rx="20.848" transform="translate(-165.4235 754.3393) rotate(-74.9803)"/>
+    <rect class="a" x="221.4034" y="223.4034" width="115.1932" height="115.1932" rx="20.848" transform="translate(-61.3481 483.3985) rotate(-75.9438)"/>
+  </g>
+</svg>

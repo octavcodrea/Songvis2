@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <defs>
+    <style>
+      .a {
+        fill: #f2f2f2;
+      }
+    </style>
+  </defs>
+  <title>C6</title>
+  <g>
+    <path d="M699,1V699H1V1H699m1-1H0V700H700V0Z"/>
+    <rect class="a" x="176.3716" y="174.0233" width="98.9482" height="98.9482" transform="translate(-90.912 248.436) rotate(-49.2022)"/>
+    <polygon class="a" points="183.253 337.399 191.01 276.915 134.751 300.439 183.253 337.399"/>
+    <polygon class="a" points="300.906 144.759 266.756 140.521 280.161 172.216 300.906 144.759"/>
+    <polygon class="a" points="107.214 208.697 132.716 201.864 114.047 183.195 107.214 208.697"/>
+  </g>
+</svg>

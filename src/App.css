@@ -1,0 +1,16 @@
+/* maincolor-1: #2437AB;
+maincolor-2: #62D2EF;
+
+seccolor-1: #FF7A06;
+seccolor-2: #FFE787; */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+
+	color: white;
+	background-color: #252433;
+}
+

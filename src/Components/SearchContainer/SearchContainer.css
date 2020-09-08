@@ -1,0 +1,39 @@
+
+
+.searchContainer{
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.searchContainer form{
+    width: 100%;
+    margin: 2px 0px;
+}
+
+.searchInput{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.searchButton{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    background-color: #62D2EF;
+
+}
+
+.searchButton:hover{
+    background-color: #5193d1;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px){
+    .searchInput{
+        width: 30%;
+        min-width: 140px;
+    }
+}
