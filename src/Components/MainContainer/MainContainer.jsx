@@ -2,11 +2,9 @@ import React from "react";
 import SideBar from "../SideBar/SideBar.jsx";
 import ImageContainer from "../ImageContainer/ImageContainer.jsx";
 import { Tooltip, IconButton } from "@material-ui/core";
+import {client_id, client_secret} from '../../apiKeys';
 // import "./MainContainer.css";
 
-
-var client_id = "6e1dde8891e74eec96e04dfd313e1ebc";
-var client_secret = "4b5a5de1e7ba44fea28195400c16b62b";
 var token = "";
 let fullDataArray = [];
 let selectedTrackObject = [];
@@ -22,6 +20,7 @@ class MainContainer extends React.Component {
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.submitSearch = this.submitSearch.bind(this);
     this.selectTrack = this.selectTrack.bind(this);
+    // this.widthBasedRender = this.widthBasedRender.bind(this);
     
   }
 
@@ -71,15 +70,19 @@ class MainContainer extends React.Component {
   formatHeader(){
     return(
       <div className="sidebar-header">
-          <h1>Songvis</h1>
-          <p>A song data image generator </p>
+          <div className="header-title">
+            <h1>S</h1><h1>O</h1><h1>N</h1><h1>G</h1><h1>V</h1><h1>I</h1><h1>S</h1>
+            <p>a song-based image generator </p>
+          </div>
+          
 
           {/* info icon next to the app title, displays a tooltip when hovered */}
           <Tooltip title={"This app uses Spotify's song data gathered with machine learning algorithms. Based on the features of a song, the app generates an image. Images from energetic and danceable songs will have warm, bright colors with sharp-angled shapes, while slower, moodier songs will generate images with cooler, darker colours and softer shapes."}>
               
-              <IconButton  size="small" className={"info"} disableRipple="true">
-                  <span class="material-icons">info</span>
-              </IconButton>
+            <IconButton  size="small" className={"info"} disableRipple="true">
+                <span class="material-icons">info</span>
+            </IconButton>
+
           </Tooltip>   
         </div>
 
@@ -267,9 +270,17 @@ class MainContainer extends React.Component {
         });
       }
     });
-
     // this.updateItems();
   }
+
+  
+  // widthBasedRender = () => {
+    
+
+  //   return(
+  //     this.renderedElems
+  //   )
+  // }
 
   componentDidUpdate = (prevProps, prevState) => {
     // if the instrumentalness is == 0 it makes it equal to a value between 0 and 0.35 so the same shape doesn't appear too often.
@@ -296,22 +307,49 @@ class MainContainer extends React.Component {
   };
 
   render() {
+    let width = window.innerWidth;
+    let renderedElems = (<div></div>);
+    // console.log("width:", width);
 
-    return (
-
-      <div className="main">
-        {this.formatHeader()}
-
-        {this.formatSideBar()}
-        
-        {this.formatImageContainer()}
-
-        <div className="mobile-footer">
-                <a href="https://octavcodrea.com">Octav Codrea</a>
+    if (width > 1024){
+      renderedElems = (
+        <div>
+       <div className="main">
+          <div className="main2">
+              {this.formatHeader()}
+            <div className="sidebar-plus-image">
+              {this.formatSideBar()} 
+            
+              {this.formatImageContainer()}
+            </div>
         </div>
+        
       </div>
+      <div className="footer">
+          <a href="https://octavcodrea.com">octavcodrea.com</a>
+        </div>
+     </div>
+     );
+   }else{
+      renderedElems = (
+       <div className="main">
+         {this.formatHeader()}
+         
+         {this.formatImageContainer()}
 
-    );
+         {this.formatSideBar()}
+
+         <div className="mobile-footer">
+             <a href="https://octavcodrea.com">octavcodrea.com</a>
+         </div>
+     </div>
+     );
+   }
+    return (
+      <div>
+        {renderedElems}
+      </div>
+    )
   }
 }
 

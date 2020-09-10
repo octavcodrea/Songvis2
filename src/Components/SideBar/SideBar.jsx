@@ -37,10 +37,10 @@ const SideBar = ({ searchedText, handleSearch, submitSearch, searchResults, sele
                 {formatSearchResults()}
                 
             </div>
-            <div className="sidebar-footer">
+            {/* <div className="sidebar-footer"> */}
                 {/* that's my name, hi */}
-                <a href="https://octavcodrea.com">Octav Codrea</a>
-            </div>
+                {/* <a href="https://octavcodrea.com">Octav Codrea</a> */}
+            {/* </div> */}
 
         </div>
     )

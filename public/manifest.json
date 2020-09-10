@@ -1,6 +1,6 @@
 {
   "short_name": "Songvis",
-  "name": "Songvis - a song data image generator",
+  "name": "Songvis - a song-based image generator",
   "icons": [
     {
       "src": "favicon.ico",
