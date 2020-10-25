@@ -12,8 +12,9 @@ import {
 
 let rotateCounter = 0;
 
+// Returns a .svg element from a predetermined list with a certain fill gradient.
 // We set the gradient fills for the shapes in React rather than CSS because it's less of a hassle.
-// The 2 colors for the gradient are decided based on values obtained from the Spotify API.
+// The .svg shape and the 2 colors for the gradient are decided based on values obtained from the Spotify API.
 
 // Style setup that will be attributed to the shapes.
 let styleA = {

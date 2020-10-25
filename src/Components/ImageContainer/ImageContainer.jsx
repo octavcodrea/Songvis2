@@ -18,6 +18,8 @@ const ImageContainer = ({
   loadImage,
 }) => {
 
+  //Holds all the image elements.
+
   let styleBgDefault = {
     position: "relative",
     backgroundColor: "#1D1C2A",

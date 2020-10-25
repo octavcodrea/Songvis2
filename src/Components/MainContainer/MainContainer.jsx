@@ -13,6 +13,10 @@ let Instrumentalness = 0;
 
 
 class MainContainer extends React.Component {
+
+  //Renders all the componenents.
+  //Searching and track selecting is handled in here.
+
   constructor(props) {
     super(props);
 
